@@ -5,22 +5,3 @@ h1 {
   font-size:50px;
   font-family: 'Montserrat', sans-serif;
 }
-<<<<<<< HEAD
-=======
-
-
-
-p.imageBox { border-style: solid; border-width: 5px; border-color: lightblue;
-font-family: 'Montserrat', sans-serif; }
-
-p:hover{
-    border-style: double;
-    border-color: lightblue;
-    border-radius: 5px;
-    font-weight: bolder;
-    text-align: center;
-    padding: 10px;
-    background-image: linear-gradient(lightblue, white);
-    color: aliceblue;
-}
->>>>>>> 9c4d77bc3ca4236c6d92ce8413ea0154b7bac00e
