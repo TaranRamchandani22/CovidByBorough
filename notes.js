@@ -14,4 +14,20 @@ source folder
   -use looping to do that
     -makes things easier
 -use looping to come up with html files
+
+
+--Pipeline notes--
+NPM tools
+  -npm test means run comand associated with command test,
+    -it automates you running comand line scripts
+      -you could auto-generate documentation
+      -you could auto-check your code for missing ;, etc.
+        -goes beyond the compiling process
+      PROJECT
+  -we have to, for our project, we have to delete old versions of micro pages
+    -and then push new micro pages into build
+      -NPM will do this for us
+        -our build pipline will do this for us
+      **look at pipline presentation
+
 */
