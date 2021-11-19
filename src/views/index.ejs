@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Covid Cases By Neiborhood</title>
+  <meta name="author" content="You">
+  <meta name="description" content="Covid Data in NYC">
+  <meta content="text/html" http-equiv="Content-type" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+
+<body>
+  <header>
+    <h1>Covid Cases By Neiborhood</h1>
+  </header>
+  <section id="charcter-table">
+    <table>
+      <tr>
+        <th>zip</th>
+        <th>allHouseholdIncome</th>
+        <th>caseRate</th>
+        <th>vacinationRate</th>
+        <th>allHouseholdIncome</th>
+        <th>percentLatino</th>
+        <th>percentAsianNonHispanic</th>
+        <th>percentWhiteNonHispanic</th>
+        <th>percentOtherEthnicity</th>
+        <th>percentEthnicityUnkown</th>
+        <th>blackNonHispanic</th>
+      </tr>
+      <% for(let i=1; i<data.length; i++){ %>
+      <tr>
+        <td><%= data[i].zip %></td>
+        <td><%= data[i].allHouseholdIncome %></td>
+        <td><%= data[i].caseRate %></td>
+        <td><%= data[i].vacinationRate %></td>
+        <td><%= data[i].allHouseholdIncome %></td>
+        <td><%= data[i].percentLatino %></td>
+        <td><%= data[i].percentAsianNonHispanic %></td>
+        <td><%= data[i].percentWhiteNonHispanic %></td>
+        <td><%= data[i].percentOtherEthnicity %></td>
+        <td><%= data[i].percentEthnicityUnkown %></td>
+        <td><%= data[i].blackNonHispanic %></td>
+        <td>
+        </td>
+      </tr>
+      <%}%>
+    </table>
+  </section>
+
+  <%- include ('global/footer');  %>
+
+</body>
+
+</html>

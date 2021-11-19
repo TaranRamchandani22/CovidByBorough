@@ -18,7 +18,8 @@ peeps.forEach(function(peep) {
   neighborhood['percentWhiteNonHispanic'] = neighborhood_info[8];
   neighborhood['percentOtherEthnicity'] = neighborhood_info[9];
   neighborhood['percentEthnicityUnkown'] = neighborhood_info[10];
-  
+  neighborhood['blackNonHispanic'] = neighborhood_info[10];
+
 /*
 ***HOW ARE WE HANDLING RACE?
 should we do an if statement if a certain neiborhood does not contain a certain race percentage?
