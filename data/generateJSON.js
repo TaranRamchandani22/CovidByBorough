@@ -2,11 +2,11 @@ const fs = require('fs');
 
 let neighborhoods = [];
 
-let peeps_csv = fs.readFileSync('data/totalData.csv', 'utf8');
+let peeps_csv = fs.readFileSync('totalData.csv', 'utf8');
 let peeps = peeps_csv.split("\n");
 
 peeps.forEach(function(peep) {
-  let neighborhood_info = peep.split(';');//split based on the ;
+  let neighborhood_info = peep.split(',');//split based on the ;
   let neighborhood = {};
   neighborhood['zip'] = neighborhood_info[1];
   neighborhood['allHouseholdIncome'] = neighborhood_info[2];
