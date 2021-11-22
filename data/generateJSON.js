@@ -2,7 +2,7 @@ const fs = require('fs');
 
 let neighborhoods = [];
 
-let peeps_csv = fs.readFileSync('data/totalData.html', 'utf8');
+let peeps_csv = fs.readFileSync('data/totalData.csv', 'utf8');
 let peeps = peeps_csv.split("\n");
 
 peeps.forEach(function(peep) {
@@ -27,6 +27,6 @@ should we do an if statement if a certain neiborhood does not contain a certain 
   neighborhoods.push(neighborhood);
 });
 
-fs.writeFileSync('data/totalData.html', JSON.stringify(neighborhoods), 'utf8');//we shoulf puy yhid in the data file
+fs.writeFileSync('data/totalData.json', JSON.stringify(neighborhoods), 'utf8');//we shoulf puy yhid in the data file
 
 //fs.writeFileSync('data/potter.json', JSON.stringify(characters), 'utf8');
