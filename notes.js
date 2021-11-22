@@ -1,4 +1,5 @@
 /*
+Amelia Dalvito 
 ----NOTES----
 --walking skeleton--
 a walking skeleton is to build the internal architecture
