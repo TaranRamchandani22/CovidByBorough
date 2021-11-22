@@ -2,7 +2,7 @@ const fs = require('fs');
 
 let neighborhoods = [];
 
-let peeps_csv = fs.readFileSync('data/totalData.csv', 'utf8');
+let peeps_csv = fs.readFileSync('totalData.csv', 'utf8');
 let peeps = peeps_csv.split("\n");
 
 peeps.forEach(function(peep) {
