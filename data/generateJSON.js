@@ -18,7 +18,7 @@ peeps.forEach(function(peep) {
   neighborhood['percentWhiteNonHispanic'] = neighborhood_info[8];
   neighborhood['percentOtherEthnicity'] = neighborhood_info[9];
   neighborhood['percentEthnicityUnkown'] = neighborhood_info[10];
-  neighborhood['blackNonHispanic'] = neighborhood_info[10];
+  neighborhood['blackNonHispanic'] = neighborhood_info[11];
 
 /*
 ***HOW ARE WE HANDLING RACE?
@@ -26,6 +26,7 @@ should we do an if statement if a certain neiborhood does not contain a certain 
   */
   neighborhoods.push(neighborhood);
 });
+
 fs.writeFileSync('data/totalData.html', JSON.stringify(neighborhoods), 'utf8');//we shoulf puy yhid in the data file
 
 //fs.writeFileSync('data/potter.json', JSON.stringify(characters), 'utf8');
