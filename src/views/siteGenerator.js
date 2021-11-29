@@ -18,11 +18,11 @@ fs.writeFileSync('../../build/index.html', indexHTML, 'utf8');
 
 let microTemplate = fs.readFileSync('micro.ejs', 'utf8');
 
-for(i of arrayOfStateNames){
-  let microdisplayData = fs.readFileSync('../../data/'+i+'.json', 'utf8');
+for(i of arrayZipCodes){
+  let microData = fs.readFileSync('../../data/'+i+'.json', 'utf8');
   let microHTML = ejs.render(microTemplate, {
     filename: __dirname + 'micro.ejs',
-    data: JSON.parse(microdisplayData)
+    data: JSON.parse(microData)
   });
     fs.writeFileSync('../../build/' + [i] + '.html', microHTML, 'utf8');
 }

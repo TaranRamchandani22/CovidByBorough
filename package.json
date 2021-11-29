@@ -1,16 +1,6 @@
 {
   "dependencies": {
     "ejs": "^3.1.6",
-    "jest": "^27.3.1"
-  }
-
-  '"scripts": {
-    "prebuild": " ",
-    "build": " ",
-    "postbuild": "node server.js && open http://localhost:3000",
-    "deploy": "npm run publish && npm run production:start",
-    "publish": " ",
-    "production:start": " ",
-    "test": "jest || exit 0"
+    "express": "^4.17.1"
   }
 }
