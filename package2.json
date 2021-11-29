@@ -9,7 +9,6 @@
     "postbuild": "node server.js && open http://localhost:3000",
     "deploy": "npm run publish && npm run production:start",
     "publish": " ",
-    "production:start": " ",
-    "test": "jest || exit 0"
+    "production:start": " "
   }
 }
