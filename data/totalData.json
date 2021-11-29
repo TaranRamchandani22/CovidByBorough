@@ -1,17 +1,5 @@
-[
-  {
-    "zip": "zip",
-    "allHouseholdIncome": "familyIncome",
-    "caseRate": "vacinationRate",
-    "vacinationRate": "allHouseholdIncome",
-    "percentLatino": "familyChildrenIncome",
-    "percentAsianNonHispanic": "percentFemale",
-    "percentWhiteNonHispanic": "percentMale",
-    "percentOtherEthnicity": "percentLatino",
-    "percentEthnicityUnkown": "percentAsianNonHispanic",
-    "blackNonHispanic": "percentWhiteNonHispanic"
-  },
-  {
+{
+  "10001": {
     "zip": "10001",
     "allHouseholdIncome": "840",
     "caseRate": "99",
@@ -23,7 +11,7 @@
     "percentEthnicityUnkown": "0.5",
     "blackNonHispanic": "0.5"
   },
-  {
+  "10002": {
     "zip": "10002",
     "allHouseholdIncome": "982",
     "caseRate": "88",
@@ -35,7 +23,7 @@
     "percentEthnicityUnkown": "0.54",
     "blackNonHispanic": "0.46"
   },
-  {
+  "10003": {
     "zip": "10003",
     "allHouseholdIncome": "161",
     "caseRate": "79",
@@ -47,7 +35,7 @@
     "percentEthnicityUnkown": "1",
     "blackNonHispanic": "0"
   },
-  {
+  "10004": {
     "zip": "10004",
     "allHouseholdIncome": "223",
     "caseRate": "99",
@@ -59,7 +47,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10005": {
     "zip": "10005",
     "allHouseholdIncome": "702",
     "caseRate": "98",
@@ -71,7 +59,7 @@
     "percentEthnicityUnkown": "1",
     "blackNonHispanic": "0"
   },
-  {
+  "10006": {
     "zip": "10006",
     "allHouseholdIncome": "044",
     "caseRate": "99",
@@ -83,7 +71,7 @@
     "percentEthnicityUnkown": "0.33",
     "blackNonHispanic": "0.67"
   },
-  {
+  "10007": {
     "zip": "10007",
     "allHouseholdIncome": "063",
     "caseRate": "99",
@@ -95,7 +83,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "1"
   },
-  {
+  "10009": {
     "zip": "10009",
     "allHouseholdIncome": "717",
     "caseRate": "80",
@@ -107,7 +95,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "1"
   },
-  {
+  "10010": {
     "zip": "10010",
     "allHouseholdIncome": "988",
     "caseRate": "78",
@@ -119,7 +107,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10011": {
     "zip": "10011",
     "allHouseholdIncome": "272",
     "caseRate": "85",
@@ -131,7 +119,7 @@
     "percentEthnicityUnkown": "0.67",
     "blackNonHispanic": "0.33"
   },
-  {
+  "10012": {
     "zip": "10012",
     "allHouseholdIncome": "467",
     "caseRate": "79",
@@ -143,7 +131,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10013": {
     "zip": "10013",
     "allHouseholdIncome": "191",
     "caseRate": "88",
@@ -155,7 +143,7 @@
     "percentEthnicityUnkown": "0.13",
     "blackNonHispanic": "0.88"
   },
-  {
+  "10014": {
     "zip": "10014",
     "allHouseholdIncome": "501",
     "caseRate": "84",
@@ -167,7 +155,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10016": {
     "zip": "10016",
     "allHouseholdIncome": "628",
     "caseRate": "97",
@@ -179,7 +167,7 @@
     "percentEthnicityUnkown": "0.71",
     "blackNonHispanic": "0.29"
   },
-  {
+  "10017": {
     "zip": "10017",
     "allHouseholdIncome": "045",
     "caseRate": "99",
@@ -191,7 +179,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10018": {
     "zip": "10018",
     "allHouseholdIncome": "484",
     "caseRate": "99",
@@ -203,7 +191,7 @@
     "percentEthnicityUnkown": "0.67",
     "blackNonHispanic": "0.33"
   },
-  {
+  "10019": {
     "zip": "10019",
     "allHouseholdIncome": "792",
     "caseRate": "99",
@@ -215,7 +203,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10021": {
     "zip": "10021",
     "allHouseholdIncome": "169",
     "caseRate": "79",
@@ -227,7 +215,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10022": {
     "zip": "10022",
     "allHouseholdIncome": "718",
     "caseRate": "99",
@@ -239,7 +227,7 @@
     "percentEthnicityUnkown": "1",
     "blackNonHispanic": "0"
   },
-  {
+  "10023": {
     "zip": "10023",
     "allHouseholdIncome": "605",
     "caseRate": "87",
@@ -251,7 +239,7 @@
     "percentEthnicityUnkown": "0.71",
     "blackNonHispanic": "0.29"
   },
-  {
+  "10024": {
     "zip": "10024",
     "allHouseholdIncome": "623",
     "caseRate": "81",
@@ -263,7 +251,7 @@
     "percentEthnicityUnkown": "1",
     "blackNonHispanic": "0"
   },
-  {
+  "10025": {
     "zip": "10025",
     "allHouseholdIncome": "624",
     "caseRate": "80",
@@ -275,7 +263,7 @@
     "percentEthnicityUnkown": "0.63",
     "blackNonHispanic": "0.37"
   },
-  {
+  "10026": {
     "zip": "10026",
     "allHouseholdIncome": "691",
     "caseRate": "66",
@@ -287,7 +275,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10027": {
     "zip": "10027",
     "allHouseholdIncome": "938",
     "caseRate": "70",
@@ -299,7 +287,7 @@
     "percentEthnicityUnkown": "0.57",
     "blackNonHispanic": "0.43"
   },
-  {
+  "10028": {
     "zip": "10028",
     "allHouseholdIncome": "969",
     "caseRate": "76",
@@ -311,7 +299,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10029": {
     "zip": "10029",
     "allHouseholdIncome": "720",
     "caseRate": "73",
@@ -323,7 +311,7 @@
     "percentEthnicityUnkown": "0.65",
     "blackNonHispanic": "0.35"
   },
-  {
+  "10030": {
     "zip": "10030",
     "allHouseholdIncome": "348",
     "caseRate": "64",
@@ -335,7 +323,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10031": {
     "zip": "10031",
     "allHouseholdIncome": "660",
     "caseRate": "70",
@@ -347,7 +335,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10032": {
     "zip": "10032",
     "allHouseholdIncome": "525",
     "caseRate": "72",
@@ -359,7 +347,7 @@
     "percentEthnicityUnkown": "0.31",
     "blackNonHispanic": "0.69"
   },
-  {
+  "10033": {
     "zip": "10033",
     "allHouseholdIncome": "093",
     "caseRate": "69",
@@ -371,7 +359,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10034": {
     "zip": "10034",
     "allHouseholdIncome": "406",
     "caseRate": "68",
@@ -383,7 +371,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10035": {
     "zip": "10035",
     "allHouseholdIncome": "799",
     "caseRate": "75",
@@ -395,7 +383,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10036": {
     "zip": "10036",
     "allHouseholdIncome": "301",
     "caseRate": "99",
@@ -407,7 +395,7 @@
     "percentEthnicityUnkown": "1",
     "blackNonHispanic": "0"
   },
-  {
+  "10037": {
     "zip": "10037",
     "allHouseholdIncome": "263",
     "caseRate": "68",
@@ -419,7 +407,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10038": {
     "zip": "10038",
     "allHouseholdIncome": "702",
     "caseRate": "87",
@@ -431,7 +419,7 @@
     "percentEthnicityUnkown": "0.69",
     "blackNonHispanic": "0.31"
   },
-  {
+  "10039": {
     "zip": "10039",
     "allHouseholdIncome": "278",
     "caseRate": "65",
@@ -443,7 +431,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10040": {
     "zip": "10040",
     "allHouseholdIncome": "677",
     "caseRate": "70",
@@ -455,7 +443,7 @@
     "percentEthnicityUnkown": "0.8",
     "blackNonHispanic": "0.2"
   },
-  {
+  "10044": {
     "zip": "10044",
     "allHouseholdIncome": "808",
     "caseRate": "79",
@@ -467,7 +455,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10065": {
     "zip": "10065",
     "allHouseholdIncome": "441",
     "caseRate": "87",
@@ -479,7 +467,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10069": {
     "zip": "10069",
     "allHouseholdIncome": "500",
     "caseRate": "92",
@@ -491,7 +479,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10075": {
     "zip": "10075",
     "allHouseholdIncome": "640",
     "caseRate": "91",
@@ -503,7 +491,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10128": {
     "zip": "10128",
     "allHouseholdIncome": "829",
     "caseRate": "81",
@@ -515,7 +503,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10280": {
     "zip": "10280",
     "allHouseholdIncome": "760",
     "caseRate": "73",
@@ -527,7 +515,7 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {
+  "10282": {
     "zip": "10282",
     "allHouseholdIncome": "001",
     "caseRate": "72",
@@ -539,5 +527,17 @@
     "percentEthnicityUnkown": "0",
     "blackNonHispanic": "0"
   },
-  {}
-]
+  "zip": {
+    "zip": "zip",
+    "allHouseholdIncome": "familyIncome",
+    "caseRate": "vacinationRate",
+    "vacinationRate": "allHouseholdIncome",
+    "percentLatino": "familyChildrenIncome",
+    "percentAsianNonHispanic": "percentFemale",
+    "percentWhiteNonHispanic": "percentMale",
+    "percentOtherEthnicity": "percentLatino",
+    "percentEthnicityUnkown": "percentAsianNonHispanic",
+    "blackNonHispanic": "percentWhiteNonHispanic"
+  },
+  "undefined": {}
+}
