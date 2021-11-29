@@ -7,7 +7,7 @@ let peeps = peeps_csv.split("\n");
 
 peeps.forEach(function(peep) {
   let neighborhood_info = peep.split(',');//split based on the ;
-  let neighborhood = neighborhood_info[1]{};
+  let neighborhood = {};
   neighborhood['zip'] = neighborhood_info[1];
   neighborhood['allHouseholdIncome'] = neighborhood_info[2];
   neighborhood['caseRate'] = neighborhood_info[3];
