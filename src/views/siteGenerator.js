@@ -15,12 +15,12 @@ arrayZipCodes.forEach(function(i,index){
 });
 */
 
-let indexHTML = ejs.render(siteTemplate, {
+let indexHTML = ejs.render(indexTemplate, {
   filename: __dirname + 'index.ejs',
   data: JSON.parse(displayData)
 });
 
-let aboutHTML = ejs.render(siteTemplate, {
+let aboutHTML = ejs.render(aboutTemplate, {
   filename: __dirname + 'about.ejs',
 });
 
