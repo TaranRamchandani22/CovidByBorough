@@ -5,7 +5,7 @@ let displayData = fs.readFileSync('../../data/totalData.json', 'utf8');
 let indexTemplate = fs.readFileSync('index.ejs', 'utf8');
 let aboutTemplate = fs.readFileSync('about.ejs', 'utf8');
 let microTemplate = fs.readFileSync('micro.ejs', 'utf8');
-let microData = fs.readFileSync('../../data/' + i + '.json', 'utf8');
+//let microData = fs.readFileSync('../../data/' + i + '.json', 'utf8');
 let arrayZipCodes = [10001,10002,10003,10004,10005,10006,10007,10009,10010,10011,10012,10013,10014,10016,10017,10018,10019,10021,10022,10023,10024,10025,10026,10027,10028,10029,10030,10031,10032,10033,10034,10035,10036,10037,10038,10039,10040,10044,10065,10069,10075,10128,10280,10282];
 let newDisplayData = [];
 
