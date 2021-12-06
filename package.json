@@ -5,3 +5,9 @@
     "fs": "0.0.1-security"
   }
 }
+
+{
+  "scripts": {
+    "deploy": "open https://TaranRamchandani22.github.io/CovidByBorough"
+  }
+}
