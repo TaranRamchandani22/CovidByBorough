@@ -1,6 +1,11 @@
 const fs = require('fs');
 const ejs = require('ejs');
 
+let displayImage1 = fs.readFileSync('../../src/images/IMG_7102.JPG');
+let displayImage2 = fs.readFileSync('../../src/images/IMG_7103.JPG');
+let displayImage3 = fs.readFileSync('../../src/images/TaranMacro.jpg');
+let displayImage4 = fs.readFileSync('../../src/images/TaranMicro.jpg');
+
 let displayData = fs.readFileSync('../../data/totalData.json', 'utf8');
 let indexTemplate = fs.readFileSync('index.ejs', 'utf8');
 let aboutTemplate = fs.readFileSync('about.ejs', 'utf8');
@@ -43,3 +48,4 @@ for (i of arrayZipCodes) {
 */
 fs.writeFileSync('../../build/index.html', indexHTML, 'utf8');
 fs.writeFileSync('../../build/about.html', aboutHTML, 'utf8');
+//fs.writeFileSync('../../src/images', 'IMG_7102.jpg');
