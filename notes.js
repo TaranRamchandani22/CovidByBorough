@@ -1,5 +1,5 @@
 /*
-Amelia Dalvito 
+Amelia Dalvito
 ----NOTES----
 --walking skeleton--
 a walking skeleton is to build the internal architecture
@@ -31,4 +31,9 @@ NPM tools
         -our build pipline will do this for us
       **look at pipline presentation
 
+
+//mr. Gohde notes
+//flat hiearchy in the build
+      -each micro page generate sepreate file, or put script tag in html
+      -in pre-build for the build pipline, generate files in build from images in src, then delete said imahges
 */
