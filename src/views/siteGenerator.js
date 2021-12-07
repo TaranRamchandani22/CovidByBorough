@@ -17,17 +17,17 @@ arrayZipCodes.forEach(function(i,index){
 */
 
 let indexHTML = ejs.render(indexTemplate, {
-  filename: __dirname + 'index.ejs',
+  filename: __dirname + 'index.ejs'
   data: JSON.parse(displayData)
 });
 
 let aboutHTML = ejs.render(aboutTemplate, {
-  filename: __dirname + 'about.ejs',
+  filename: __dirname + 'about.ejs'
 });
 
 for(i of arrayZipCodes){
   let microHTML = ejs.render(microTemplate, {
-    filename: __dirname + 'micro.ejs',
+    filename: __dirname + 'micro.ejs'
   });
   fs.writeFileSync('../../build/'+i+'.html',microHTML,'utf8')
 }
