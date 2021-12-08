@@ -7,7 +7,8 @@
     "build": "node siteGenerator.js && cp -R images build && cp style.css build",
     "postbuild": "open http://localhost:3000 && node server.js",
     "deploy": "npm run publish && npm run production:start",
-    "publish": "https://gi"
+    "publish": "https://gi",
+    "production: start": "open https://taranramchandani22.github.io/CovidByBorough/build/"
   },
 
   "repository": {
