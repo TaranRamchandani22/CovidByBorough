@@ -33,6 +33,7 @@ let aboutHTML = ejs.render(aboutTemplate, {
 for(i of arrayZipCodes){
   let microHTML = ejs.render(microTemplate, {
     filename: __dirname + 'micro.ejs',
+    data: i
   });
   fs.writeFileSync('../../build/'+i+'.html',microHTML,'utf8')
 }
