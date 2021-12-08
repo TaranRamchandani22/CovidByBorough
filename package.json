@@ -1,9 +1,31 @@
 {
-  "dependencies": {
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "fs": "0.0.1-security"
-  }
+  "name": "data",
+  "version": "1.0.0",
+  "main": "server.js"
+  "scripts": {
+    "prebuild": "node generateJSON.js",
+    "build": "node siteGenerator.js && cp -R images build && cp style.css build"
+    "postbuild": "open http://localhost:3000 && node server.js",
+    "deploy": "npm run publish && npm run production:start",
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaranRamchandani22/CovidByBorough.git"
+  },
+
+  "author": "Taran and Amelia",
+
+"homepage": "https://github.com/TaranRamchandani22/CovidByBorough#readme",
+"dependencies": {
+  "ejs": "^3.1.6",
+  "express": "^4.17.1",
+  "jsdoc": "^3.6.7",
+  "save": "^2.4.0"
 }
 
-{
+
+
+
+
+}
