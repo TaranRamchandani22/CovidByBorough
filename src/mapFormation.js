@@ -1,14 +1,14 @@
 
-d3.json('https://taranramchandani22.github.io/CovidByBorough/build/', function(err, rows){ //use an http link, /data and github file 
+d3.json('https://taranramchandani22.github.io/CovidByBorough/build/dataTest/', function(err, rows){ //use an http link, /data and github file
       function unpack(rows, key) { // upack takes the row of data ans returns the value of a specific key in the row
           return rows.map(function(row) { return row[key]; });
       }
 
        var data = [{
             type: 'choropleth',
-            locations: unpack(rows, 'CODE'),
-            z: unpack(rows, 'GDP (BILLIONS)'),//put what you want to return
-            text: unpack(rows, 'COUNTRY'),
+            locations: unpack(rows, 'zip'),
+            z: unpack(rows, 'caseRate'),//put what you want to return
+            text: unpack(rows, 'zip'),
             colorscale: [
                 [0,'rgb(5, 10, 172)'],[0.35,'rgb(40, 60, 190)'],
                 [0.5,'rgb(70, 100, 245)'], [0.6,'rgb(90, 120, 245)'],
