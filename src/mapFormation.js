@@ -1,5 +1,5 @@
 
-d3.json('https://github.com/TaranRamchandani22/CovidByBorough/blob/main/data/totalData.json', function(err, rows){ //use an http link,
+d3.json('https://taranramchandani22.github.io/CovidByBorough/build/', function(err, rows){ //use an http link, /data and github file 
       function unpack(rows, key) { // upack takes the row of data ans returns the value of a specific key in the row
           return rows.map(function(row) { return row[key]; });
       }
