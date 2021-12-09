@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "prebuild": "node generateJSON.js",
-    "build": "node siteGenerator.js && cp images build && cp style.css build",
+    "prebuild": "node data/generateJSON.js",
+    "build": "node src/views/siteGenerator.js && cp images build && cp style.css build",
     "postbuild": "open http://localhost:3000 && node server.js",
-    "deploy": "open https://github.com/TaranRamchandani22/CovidByBorough/build",
+    "deploy": "open https://github.com/TaranRamchandani22/CovidByBorough/build"
   },
 
   "repository": {
@@ -17,7 +17,7 @@
   "express": "^4.17.1",
   "jsdoc": "^3.6.7",
   "save": "^2.4.0"
-},
+}
 
 
 }
