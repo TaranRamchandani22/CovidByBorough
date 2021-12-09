@@ -68,7 +68,7 @@ d3.json('https://taranramchandani22.github.io/CovidByBorough/dataTest/totalData.
        var data = [{
             type: 'choropleth',
             locations: unpack(rows, 'CODE'),
-            geojson:"https://taranramchandani22.github.io/CovidByBorough/dataTest/mapData.geo.Json",
+            geojson:"https://taranramchandani22.github.io/CovidByBorough/dataTest/mapData.geoJson",
             z: unpack(rows, 'caseRate'),//put what you want to return
             text: unpack(rows, 'zip'),
             colorscale: [

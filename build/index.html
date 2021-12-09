@@ -263,7 +263,7 @@
       </ul>
     </div>
   </nav>
-  
+
 	<div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
 
   <header>
@@ -296,7 +296,8 @@ d3.json('https://taranramchandani22.github.io/CovidByBorough/dataTest/totalData.
 
        var data = [{
             type: 'choropleth',
-            locations: unpack(rows, 'zip'),
+            locations: unpack(rows, 'CODE'),
+            geojson:"https://taranramchandani22.github.io/CovidByBorough/dataTest/mapData.geoJson",
             z: unpack(rows, 'caseRate'),//put what you want to return
             text: unpack(rows, 'zip'),
             colorscale: [
@@ -318,12 +319,12 @@ d3.json('https://taranramchandani22.github.io/CovidByBorough/dataTest/totalData.
             colorbar: {
                 autotic: false,
                 tickprefix: '$',
-                title: 'GDP<br>Billions US$'
+                title: 'blank1'
             }
       }];
 
       var layout = {
-          title: '2014 Global GDP<br>Source: <a href="https://www.cia.gov/library/publications/the-world-factbook/fields/2195.html"> CIA World Factbook</a>',
+          title: 'blank2',
           geo:{
               showframe: false,
               showcoastlines: false,
