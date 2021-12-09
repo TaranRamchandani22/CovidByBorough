@@ -1,14 +1,9 @@
 {
-  "name": "data",
-  "version": "1.0.0",
-  "main": "server.js",
   "scripts": {
     "prebuild": "node generateJSON.js",
-    "build": "node siteGenerator.js && cp -R images build && cp style.css build",
+    "build": "node siteGenerator.js && cp images build && cp style.css build",
     "postbuild": "open http://localhost:3000 && node server.js",
-    "deploy": "npm run publish && npm run production:start",
-    "publish": "https://gi",
-    "production: start": "open https://taranramchandani22.github.io/CovidByBorough/build/"
+    "deploy": "open https://github.com/TaranRamchandani22/CovidByBorough/build",
   },
 
   "repository": {
@@ -16,18 +11,13 @@
     "url": "git+https://github.com/TaranRamchandani22/CovidByBorough.git"
   },
 
-  "author": "Taran and Amelia",
-
 "homepage": "https://github.com/TaranRamchandani22/CovidByBorough#readme",
 "dependencies": {
   "ejs": "^3.1.6",
   "express": "^4.17.1",
   "jsdoc": "^3.6.7",
   "save": "^2.4.0"
-}
-
-
-
+},
 
 
 }
