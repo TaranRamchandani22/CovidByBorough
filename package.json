@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "prebuild": "node data/generateJSON.js",
+    "prebuild": "node ../prebuild.js",
     "build": "node src/views/siteGenerator.js && cp images build && cp style.css build",
     "postbuild": "open http://localhost:3000 && node server.js",
     "deploy": "open https://github.com/TaranRamchandani22/CovidByBorough/build"
