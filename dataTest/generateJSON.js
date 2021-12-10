@@ -12,7 +12,7 @@ peeps.forEach(function(peep) {
   neighborhood['zip'] = neighborhood_info[1];
   neighborhood['allHouseholdIncome'] = neighborhood_info[2];
   neighborhood['caseRate'] = neighborhood_info[3];
-  neighborhood['vacinationRate'] = neighborhood_info[4];
+  neighborhood['vacinationRate'] = neighborhood_info[4].replace("$","");
   neighborhood['allHouseholdIncome'] = neighborhood_info[5];
   neighborhood['percentLatino'] = neighborhood_info[6];
   neighborhood['percentAsianNonHispanic'] = neighborhood_info[7];
