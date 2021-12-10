@@ -280,7 +280,7 @@ d3.csv('https://taranramchandani22.github.io/CovidByBorough/data/totalData.csv',
             featureidkey: "properties.zip",
             geojson:"https://raw.githubusercontent.com/TaranRamchandani22/CovidByBorough/main/data/mapData.geoJson",
             z: unpack(rows, 'caseRate'),//put what you want to return
-            text: unpack(rows, "zipcode"+'zip'),//fix
+            text: unpack(rows,'zip'),//fix
           //  autocolorscale: true
           colorscale: [
                 [0,'rgb(5, 10, 172)'],[0.35,'rgb(40, 60, 190)'],
