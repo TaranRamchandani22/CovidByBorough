@@ -266,24 +266,7 @@
   <header>
     <h1>Covid Cases By Neighborhood</h1>
   </header>
-  <section id="charcter-table">
-    <table>
-      <tr>
-        <th>zip</th>
-        <th>allHouseholdIncome</th>
-        <th>caseRate</th>
-        <th>vacinationRate</th>
-        <th>allHouseholdIncome</th>
-        <th>percentLatino</th>
-        <th>percentAsianNonHispanic</th>
-        <th>percentWhiteNonHispanic</th>
-        <th>percentOtherEthnicity</th>
-        <th>percentEthnicityUnkown</th>
-        <th>blackNonHispanic</th>
-      </tr>
-      
-    </table>
-  </section>
+
   <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
 <script>
 d3.csv('https://taranramchandani22.github.io/CovidByBorough/data/totalData.csv', function(err, rows){ //use an http link, /data and github file
@@ -297,7 +280,7 @@ d3.csv('https://taranramchandani22.github.io/CovidByBorough/data/totalData.csv',
             featureidkey: "properties.zip",
             geojson:"https://raw.githubusercontent.com/TaranRamchandani22/CovidByBorough/main/data/mapData.geoJson",
             z: unpack(rows, 'caseRate'),//put what you want to return
-            text: unpack(rows, "zipcode"+'zip'),
+            text: unpack(rows, "zipcode"+'zip'),//fix
           //  autocolorscale: true
           colorscale: [
                 [0,'rgb(5, 10, 172)'],[0.35,'rgb(40, 60, 190)'],
@@ -330,6 +313,30 @@ var layout = {
       Plotly.newPlot("myDiv", data, layout, {showLink: false});
 });
 </script>
+
+
+
+<section id="charcter-table">
+  <table>
+    <tr>
+      <th>zip</th>
+      <th>allHouseholdIncome</th>
+      <th>caseRate</th>
+      <th>vacinationRate</th>
+      <th>allHouseholdIncome</th>
+      <th>percentLatino</th>
+      <th>percentAsianNonHispanic</th>
+      <th>percentWhiteNonHispanic</th>
+      <th>percentOtherEthnicity</th>
+      <th>percentEthnicityUnkown</th>
+      <th>blackNonHispanic</th>
+    </tr>
+    
+  </table>
+</section>
+
+
+
   
   <footer class="bg-light text-center text-lg-start">
     <!-- Copyright -->

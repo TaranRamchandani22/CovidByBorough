@@ -482,5 +482,17 @@
     "percentWhiteNonHispanic": "0",
     "percentOtherEthnicity": "0",
     "percentEthnicityUnkown": "0"
-  }
+  },
+  "zip": {
+    "zip": "zip",
+    "caseRate": "caseRate",
+    "vacinationRate": "vacinationRate",
+    "allHouseholdIncome": "allHouseholdIncome",
+    "percentLatino": "percentLatino",
+    "percentAsianNonHispanic": "percentAsianNonHispanic",
+    "percentWhiteNonHispanic": "percentWhiteNonHispanic",
+    "percentOtherEthnicity": "percentOtherEthnicity",
+    "percentEthnicityUnkown": "percentEthnicityUnkown"
+  },
+  "undefined": {}
 }
