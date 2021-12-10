@@ -10,16 +10,15 @@ peeps.forEach(function(peep) {
   let neighborhood_info = peep.split(',');//split based on the ,
   let neighborhood = {};
   neighborhood['zip'] = neighborhood_info[1];
-  neighborhood['allHouseholdIncome'] = neighborhood_info[2];
-  neighborhood['caseRate'] = neighborhood_info[3];
-  neighborhood['vacinationRate'] = neighborhood_info[4];
-  neighborhood['allHouseholdIncome'] = neighborhood_info[5];
-  neighborhood['percentLatino'] = neighborhood_info[6];
-  neighborhood['percentAsianNonHispanic'] = neighborhood_info[7];
-  neighborhood['percentWhiteNonHispanic'] = neighborhood_info[8];
-  neighborhood['percentOtherEthnicity'] = neighborhood_info[9];
-  neighborhood['percentEthnicityUnkown'] = neighborhood_info[10];
-  neighborhood['blackNonHispanic'] = neighborhood_info[11];
+  neighborhood['caseRate'] = neighborhood_info[2];
+  neighborhood['vacinationRate'] = neighborhood_info[3];
+  neighborhood['allHouseholdIncome'] = neighborhood_info[4];
+  neighborhood['percentLatino'] = neighborhood_info[9];
+  neighborhood['percentAsianNonHispanic'] = neighborhood_info[10];
+  neighborhood['percentWhiteNonHispanic'] = neighborhood_info[11];
+  neighborhood['percentOtherEthnicity'] = neighborhood_info[12];
+  neighborhood['percentEthnicityUnkown'] = neighborhood_info[13];
+  neighborhood['blackNonHispanic'] = neighborhood_info[14];
 
   neighborhoods[neighborhood_info[1]] = neighborhood;
 });

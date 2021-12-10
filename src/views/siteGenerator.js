@@ -37,16 +37,7 @@ for(i of arrayZipCodes){
   });
   fs.writeFileSync('../../build/'+i+'.html',microHTML,'utf8')
 }
-/*
-for (i of arrayZipCodes) {
-  let microData = fs.readFileSync('../../data/' + i + '.json', 'utf8');
-  let microHTML = ejs.render(microTemplate, {
-    filename: __dirname + 'micro.ejs',
-    data: JSON.parse(microData)
-  });
-  fs.writeFileSync('../../build/' + [i] + '.html', microHTML, 'utf8');
-}
-*/
+
 fs.writeFileSync('../../build/index.html', indexHTML, 'utf8');
 fs.writeFileSync('../../build/about.html', aboutHTML, 'utf8');
 //fs.writeFileSync('../../src/images', 'IMG_7102.jpg');
