@@ -2,11 +2,7 @@
 var fs = require("fs-extra");
 
 
-let displayData = fs.readFileSync('data/totalData.json', 'utf8');
-let displayImage1 = fs.readFileSync('images/IMG_7102.JPG');
-let displayImage2 = fs.readFileSync('images/IMG_7103.JPG');
-let displayImage3 = fs.readFileSync('images/TaranMacro.jpg');
-let displayImage4 = fs.readFileSync('images/TaranMicro.jpg');
+
 
 //fs.rmdirSync("../build");
 const dir = 'build';
