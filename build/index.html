@@ -15,8 +15,6 @@
 
 <script src='https://cdn.plot.ly/plotly-2.6.3.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
-<script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="https://d3js.org/topojson.v1.min.js"></script>
 </head>
 
 <body>
@@ -291,7 +289,7 @@
 
 <script>
 
-d3.json('https://taranramchandani22.github.io/CovidByBorough/dataTest/totalData.json', function(err, rows){ //use an http link, /data and github file
+d3.json('https://taranramchandani22.github.io/CovidByBorough/data/totalData.json', function(err, rows){ //use an http link, /data and github file
       function unpack(rows, key) { // upack takes the row of data ans returns the value of a specific key in the row
           return rows.map(function(row) { return row[key]; });
       }
@@ -301,7 +299,7 @@ d3.json('https://taranramchandani22.github.io/CovidByBorough/dataTest/totalData.
             locationmode:'geojson-id',
             locations: unpack(rows, 'CTY_FIPS'),
             featureidkey: "properties.OBJECTID",
-            geojson:"https://taranramchandani22.github.io/CovidByBorough/dataTest/mapData.geoJson",
+            geojson:"https://taranramchandani22.github.io/CovidByBorough/data/mapData.geoJson",
             z: unpack(rows, 'caseRate'),//put what you want to return
             text: unpack(rows, 'zip'),
             colorscale: [
