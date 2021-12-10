@@ -19,6 +19,7 @@ peeps.forEach(function(peep) {
   neighborhood['percentOtherEthnicity'] = neighborhood_info[12];
   neighborhood['percentEthnicityUnkown'] = neighborhood_info[13];
   neighborhood['blackNonHispanic'] = neighborhood_info[14];
+  //neighborhood['blackNonHispanic'] = neighborhood_info[14].substring(1,neighborhood_info[14].length+1);
 
   neighborhoods[neighborhood_info[1]] = neighborhood;
 });
