@@ -25,6 +25,8 @@
   </header>
 
   <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+  <div id='myDiv2'><!-- Plotly chart will be drawn inside this DIV --></div>
+
 <script>
 d3.csv('https://taranramchandani22.github.io/CovidByBorough/data/totalData.csv', function(err, rows){ //use an http link, /data and github file
       function unpack(rows, key) { // upack takes the row of data ans returns the value of a specific key in the row
@@ -68,6 +70,49 @@ var layout = {
         }
       };
       Plotly.newPlot("myDiv", data, layout, {showLink: false});
+});
+d3.csv('https://taranramchandani22.github.io/CovidByBorough/data/totalData.csv', function(err, rows){ //use an http link, /data and github file
+      function unpack(rows, key) { // upack takes the row of data ans returns the value of a specific key in the row
+          return rows.map(function(row) { return row[key]; });
+      }
+       var data = [{
+            type: 'choropleth',
+            locationmode:'geojson-id',
+            locations: unpack(rows, 'zip'),
+            featureidkey: "properties.zip",
+            geojson:"https://raw.githubusercontent.com/TaranRamchandani22/CovidByBorough/main/data/mapData.geoJson",
+            z: unpack(rows, 'allHouseholdIncome'),//put what you want to return
+            text: unpack(rows,'zip'),//fix
+          //  autocolorscale: true
+          colorscale: [
+                [0,'rgb(5, 10, 172)'],[0.35,'rgb(40, 60, 190)'],
+                [0.5,'rgb(70, 100, 245)'], [0.6,'rgb(90, 120, 245)'],
+                [0.7,'rgb(106, 137, 247)'],[1,'rgb(220, 220, 220)']],
+            autocolorscale: false,
+            reversescale: true,
+            marker: {
+                line: {
+                    color: 'rgb(180,180,180)',
+                    width: 0.5
+                }
+            },
+            tick0: 0,
+            zmin: 0,
+            dtick: 1000,
+            colorbar: {
+                autotic: false,
+                tickprefix: '$',
+                title: 'Household Income'
+            }
+}];
+
+var layout = {
+  title: 'Household Income by Zipcode',
+  geo: {
+    fitbounds: "geojson",
+        }
+      };
+      Plotly.newPlot("myDiv2", data, layout, {showLink: false});
 });
 </script>
 
