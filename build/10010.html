@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang = "en">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <title>Micrographics</title>
-  <meta name = "author" content = "Taran and Amelia">
-  <meta name = "description" content = "Infographics">
+  <meta name="author" content="Taran and Amelia">
+  <meta name="description" content="Infographics">
   <!-- <link rel = "stylesheet" href = "../css/styles.css"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -16,17 +16,22 @@
   <script src='https://cdn.plot.ly/plotly-2.6.3.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
   <style>
-    .bar{fill: steelblue;}
-    .bar:hover{fill:brown;}
-    .axis--x path{
+    .bar {
+      fill: steelblue;
+    }
+
+    .bar:hover {
+      fill: brown;
+    }
+
+    .axis--x path {
       display: none;
     }
   </style>
-
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="index.html">Macropage</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -270,66 +275,69 @@
       </ul>
     </div>
   </nav>
+  <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
 
-<div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+        <table>
+          <tr>
+            <th>zip</th>
+            <th>caseRate</th>
+            <th>vacinationRate</th>
+            <th>allHouseholdIncome</th>
+            <th>percentLatino</th>
+            <th>percentAsianNonHispanic</th>
+            <th>percentWhiteNonHispanic</th>
+            <th>percentOtherEthnicity</th>
+            <th>percentEthnicityUnkown</th>
+            <th>blackNonHispanic</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+      </table>
 
-<script>
-d3.csv('https://taranramchandani22.github.io/CovidByBorough/data/totalData.csv', function(err, rows){ //use an http link, /data and github file
-      function unpack(rows, key) { // upack takes the row of data ans returns the value of a specific key in the row
-          return rows.map(function(row) { return row[key]; });
-      }
-       var data = [{
-            type: 'choropleth',
-            locationmode:'geojson-id',
-            locations: unpack(rows, 'zip'),
-            featureidkey: "properties.zip",
-            geojson:"https://raw.githubusercontent.com/TaranRamchandani22/CovidByBorough/main/data/mapData.geoJson",
-            z: unpack(rows, 'allHouseholdIncome'),//put what you want to return
-            text: unpack(rows,'zip'),//fix
-          //  autocolorscale: true
-          colorscale: [
-                [0,'rgb(5, 10, 172)'],[0.35,'rgb(40, 60, 190)'],
-                [0.5,'rgb(70, 100, 245)'], [0.6,'rgb(90, 120, 245)'],
-                [0.7,'rgb(106, 137, 247)'],[1,'rgb(220, 220, 220)']],
-            autocolorscale: false,
-            reversescale: true,
-            marker: {
-                line: {
-                    color: 'rgb(180,180,180)',
-                    width: 0.5
-                }
-            },
-            tick0: 0,
-            zmin: 0,
-            dtick: 1000,
-            colorbar: {
-                autotic: false,
-                tickprefix: '',
-                title: 'Covid Case Rate'
-            }
-}];
+  <script>
+  let percentL= ;
+  let percentAsian= ;
+  let percentWhite= ;
+  let percentOther= ;
+  let percentUnknown= ;
+  let percentBlack=  ;
+    var data = [{
+      values: [percentL, percentAsian, percentWhite,percentOther,percentUnknown,percentBlack],
+      labels: ['percentL', 'Non-percentAsian', 'percentWhite','percentOther','percentUnknown','percentBlack'],
+      type: 'pie'
+    }];
+    var layout = {
+      title: 'Breakdown of Zipcode Based on Race',
+      height: 400,
+      width: 500
+    };
+    Plotly.newPlot('myDiv', data, layout);
+  </script>
 
-var layout = {
-  title: 'Covid Cases in Manhattan',
-  geo: {
-    fitbounds: "geojson",
-        }
-      };
-      Plotly.newPlot("myDiv", data, layout, {showLink: false});
-});
-</script>
+  <tr>
+    Zipcode Number:
+    <td></td>
+  </tr>
 
-<tr>
-  Zipcode Number:
-  <td>10010</td>
-</tr>
+  <section id="summary">
+      <h1>Summary:</h1>
+      <ul>
+          <p> The pie charts above display that zip code 's average vacination rate is  .</p>
+          <li> Zipcode  has a case rate of  . </li>
+      </ul>
+    </section>
 
-<tr>
-  Case Rate:
-  <td></td>
-</tr>
-
-
+    
   <footer class="bg-light text-center text-lg-start">
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
@@ -339,4 +347,5 @@ var layout = {
   </footer>
 
 </body>
+
 </html>

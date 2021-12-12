@@ -116,13 +116,10 @@ var layout = {
 });
 </script>
 
-
-
 <section id="charcter-table">
   <table>
     <tr>
       <th>zip</th>
-      <th>allHouseholdIncome</th>
       <th>caseRate</th>
       <th>vacinationRate</th>
       <th>allHouseholdIncome</th>
@@ -136,7 +133,6 @@ var layout = {
     <% for(let i=1; i<data.length; i++){ %>
     <tr>
       <td><%= data[i].zip %></td>
-      <td><%= data[i].allHouseholdIncome %></td>
       <td><%= data[i].caseRate %></td>
       <td><%= data[i].vacinationRate %></td>
       <td><%= data[i].allHouseholdIncome %></td>
