@@ -21,13 +21,17 @@ arrayZipCodes.forEach(function(i,index){
   newDisplayData.push(fs.readFileSync('../../data/' + i + '.json', 'utf8'))
 });
 */
+
 for(let i =0;i<zipCodes.length;i++){
+  globalData=data[i+1]
+}
+
 let indexHTML = ejs.render(indexTemplate, {
   filename: __dirname + 'index.ejs',
-  data: JSON.parse(displayData),
-  totalMicroData: data[i+1]
+  data: JSON.parse(microData),
+  globalDara: globalData
 });
-}
+
 let aboutHTML = ejs.render(aboutTemplate, {
   filename: __dirname + 'about.ejs',
 });

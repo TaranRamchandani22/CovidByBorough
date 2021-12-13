@@ -22,6 +22,7 @@
 
   <header>
     <h1>Covid Cases By Neighborhood</h1>
+    <h5>By Amelia Dalvito and Taran Ramchandani</h5>
   </header>
 
   <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
@@ -115,38 +116,26 @@ var layout = {
       Plotly.newPlot("myDiv2", data, layout, {showLink: false});
 });
 </script>
+<h2>Data Table:</h2>
 
 <section id="charcter-table">
   <table>
+ <% for(let i=0; i<data.length; i++){ %>
     <tr>
-      <th>zip</th>
-      <th>caseRate</th>
-      <th>vacinationRate</th>
-      <th>allHouseholdIncome</th>
-      <th>percentLatino</th>
-      <th>percentAsianNonHispanic</th>
-      <th>percentWhiteNonHispanic</th>
-      <th>percentOtherEthnicity</th>
-      <th>percentEthnicityUnkown</th>
-      <th>blackNonHispanic</th>
-    </tr>
-    <% for(let i=1; i<data.length; i++){ %>
-    <tr>
-      <td><%= data[i].zip %></td>
-      <td><%= data[i].caseRate %></td>
-      <td><%= data[i].vacinationRate %></td>
-      <td><%= data[i].allHouseholdIncome %></td>
-      <td><%= data[i].percentLatino %></td>
-      <td><%= data[i].percentAsianNonHispanic %></td>
-      <td><%= data[i].percentWhiteNonHispanic %></td>
-      <td><%= data[i].percentOtherEthnicity %></td>
-      <td><%= data[i].percentEthnicityUnkown %></td>
-      <td><%= data[i].blackNonHispanic %></td>
+        <td><%= data[i].zip %></td>
+        <td><%= data[i].caseRate %></td>
+        <td><%= data[i].vacinationRate %></td>
+        <td><%= data[i].allHouseholdIncome %></td>
+        <td><%= data[i].percentLatino %></td>
+        <td><%= data[i].percentAsianNonHispanic %></td>
+        <td><%= data[i].percentWhiteNonHispanic %></td>
+        <td><%= data[i].percentOtherEthnicity %></td>
+        <td><%= data[i].percentEthnicityUnkown %></td>
     </tr>
     <%}%>
   </table>
 </section>
-
+<h2>Data Summary:</h2>
 
 
   <%- include('../src/views/partials/footer.ejs') -%>
