@@ -2,7 +2,7 @@ const fs = require('fs');
 const ejs = require('ejs');
 
 let displayData = fs.readFileSync('../../data/totalData.json', 'utf8');
-let microData = fs.readFileSync('../../data/totalMicroData.json', 'utf8');
+//let microData = fs.readFileSync('../../data/totalMicroData.json', 'utf8');
 
 let indexTemplate = fs.readFileSync('index.ejs', 'utf8');
 let aboutTemplate = fs.readFileSync('about.ejs', 'utf8');
@@ -41,7 +41,11 @@ for(let i of microData){
     data: i,
     totalMicroData: microData
   });
+<<<<<<< Updated upstream
   fs.writeFileSync('../../build/'+i+'.html',microHTML,'utf8')
+=======
+  fs.writeFileSync('../../build/'+i+'.html',microHTML,'utf8');
+>>>>>>> Stashed changes
 }
 */
 
