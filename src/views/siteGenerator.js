@@ -56,7 +56,7 @@ for(let i of microData){
 */
 
 
-for(let i =0;i<zipCodes.length;i++){
+for(let i=0;i<zipCodes.length;i++){
   let microHTML =ejs.render(microTemplate, {
     filename: __dirname + 'micro.ejs',
     data: JSON.parse(microData),

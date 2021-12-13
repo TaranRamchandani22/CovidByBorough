@@ -3,7 +3,8 @@
     "prebuild": "node prebuild.js",
     "build": "node src/views/siteGenerator.js",
     "postbuild": "open http://localhost:3000 && node server.js",
-    "publish": "git add build && git commit -m && git push",
+    "publish": "npm run deploy",
+    "deploy": "git push origin main && open http://TaranRamchandani22.github.io/build",
     "production:start": "git open"
   },
   "repository": {
