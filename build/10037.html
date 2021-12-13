@@ -279,41 +279,45 @@
 
         <table>
           <tr>
-            <th>zip</th>
-            <th>caseRate</th>
-            <th>vacinationRate</th>
-            <th>allHouseholdIncome</th>
-            <th>percentLatino</th>
-            <th>percentAsianNonHispanic</th>
-            <th>percentWhiteNonHispanic</th>
-            <th>percentOtherEthnicity</th>
-            <th>percentEthnicityUnkown</th>
-            <th>blackNonHispanic</th>
+            <th>zip </th>
+            <td></td>
+            <th>caseRate </th>
+            <th>vacinationRate </th>
+            <th>allHouseholdIncome </th>
+            <th>percentLatino </th>
+            <th>percentAsianNonHispanic </th>
+            <th>percentWhiteNonHispanic </th>
+            <th>percentOtherEthnicity </th>
+            <th>percentEthnicityUnkown </th>
+            <th>blackNonHispanic </th>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>10037</td>
+            <td>9724.25</td>
+            <td>68</td>
+            <td>46263</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
             <td></td>
           </tr>
       </table>
 
+      <div id='myDiv2'><!-- Plotly chart will be drawn inside this DIV --></div>
   <script>
-  let percentL= ;
-  let percentAsian= ;
-  let percentWhite= ;
-  let percentOther= ;
-  let percentUnknown= ;
-  let percentBlack=  ;
+  let percentL = 0;
+  let percentAsian = 0;
+  let percentWhite = 0;
+  let percentOther = 0;
+  let percentUnknown = 0;
+  let unknown2 =(100-percentL-percentAsian-percentWhite-percentOther)+percentUnknown;
+  //let percentBlack =  ;
     var data = [{
-      values: [percentL, percentAsian, percentWhite,percentOther,percentUnknown,percentBlack],
-      labels: ['percentL', 'Non-percentAsian', 'percentWhite','percentOther','percentUnknown','percentBlack'],
+      values: [percentL, percentAsian, percentWhite, percentOther, unknown2],
+      //values: [totalMicroData.percentLatino, totalMicroData.percentAsianNonHispanic, totalMicroData.percentWhiteNonHispanic,totalMicroData.percentOtherEthnicity ,totalMicroData.percentEthnicityUnkown, totalMicroData.blackNonHispanic],
+      labels: ['Latino', 'Asian', 'White','Other','Unknown'],
       type: 'pie'
     }];
     var layout = {
@@ -321,19 +325,19 @@
       height: 400,
       width: 500
     };
-    Plotly.newPlot('myDiv', data, layout);
+    Plotly.newPlot('myDiv2', data, layout);
   </script>
 
   <tr>
     Zipcode Number:
-    <td></td>
+    <td>10037</td>
   </tr>
 
   <section id="summary">
-      <h1>Summary:</h1>
+      <h2>Summary:</h2>
       <ul>
-          <p> The pie charts above display that zip code 's average vacination rate is  .</p>
-          <li> Zipcode  has a case rate of  . </li>
+        <p>The pie charts above display that zip code 10037's average vacination rate is 68 .</p>
+        <p>Zipcode 10037 has a case rate of 9724.25%. </li>
       </ul>
     </section>
 

@@ -32,45 +32,25 @@
 
 <body>
   <%- include('../src/views/partials/navbar.ejs') -%>
-  <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+  
+  <tr>
+    Zipcode Number:
+    <td><%= totalMicroData.zip %></td>
+  </tr>
 
-        <table>
-          <tr>
-            <th>zip</th>
-            <th>caseRate</th>
-            <th>vacinationRate</th>
-            <th>allHouseholdIncome</th>
-            <th>percentLatino</th>
-            <th>percentAsianNonHispanic</th>
-            <th>percentWhiteNonHispanic</th>
-            <th>percentOtherEthnicity</th>
-            <th>percentEthnicityUnkown</th>
-            <th>blackNonHispanic</th>
-          </tr>
-          <tr>
-            <td><%= totalMicroData.zip %></td>
-            <td><%= totalMicroData.caseRate %></td>
-            <td><%= totalMicroData.vacinationRate %></td>
-            <td><%= totalMicroData.allHouseholdIncome %></td>
-            <td><%= totalMicroData.percentLatino %></td>
-            <td><%= totalMicroData.percentAsianNonHispanic %></td>
-            <td><%= totalMicroData.percentWhiteNonHispanic %></td>
-            <td><%= totalMicroData.percentOtherEthnicity %></td>
-            <td><%= totalMicroData.percentEthnicityUnkown %></td>
-            <td><%= totalMicroData.blackNonHispanic %></td>
-          </tr>
-      </table>
-
+      <div id='myDiv2'><!-- Plotly chart will be drawn inside this DIV --></div>
   <script>
-  let percentL= <%= totalMicroData.percentLatino %>;
-  let percentAsian= <%= totalMicroData.percentAsianNonHispanic %>;
-  let percentWhite= <%= totalMicroData.percentWhiteNonHispanic %>;
-  let percentOther= <%= totalMicroData.percentOtherEthnicity %>;
-  let percentUnknown= <%= totalMicroData.percentEthnicityUnkown %>;
-  let percentBlack=  <%= totalMicroData.blackNonHispanic %>;
+  let percentL = <%= totalMicroData.percentLatino %>;
+  let percentAsian = <%= totalMicroData.percentAsianNonHispanic %>;
+  let percentWhite = <%= totalMicroData.percentWhiteNonHispanic %>;
+  let percentOther = <%= totalMicroData.percentOtherEthnicity %>;
+  let percentUnknown = <%= totalMicroData.percentEthnicityUnkown %>;
+  let unknown2 =(100-percentL-percentAsian-percentWhite-percentOther)+percentUnknown;
+  //let percentBlack =  <%= totalMicroData.blackNonHispanic %>;
     var data = [{
-      values: [percentL, percentAsian, percentWhite,percentOther,percentUnknown,percentBlack],
-      labels: ['percentL', 'Non-percentAsian', 'percentWhite','percentOther','percentUnknown','percentBlack'],
+      values: [percentL, percentAsian, percentWhite, percentOther, unknown2],
+      //values: [totalMicroData.percentLatino, totalMicroData.percentAsianNonHispanic, totalMicroData.percentWhiteNonHispanic,totalMicroData.percentOtherEthnicity ,totalMicroData.percentEthnicityUnkown, totalMicroData.blackNonHispanic],
+      labels: ['Latino', 'Asian', 'White','Other','Unknown'],
       type: 'pie'
     }];
     var layout = {
@@ -78,19 +58,40 @@
       height: 400,
       width: 500
     };
-    Plotly.newPlot('myDiv', data, layout);
+    Plotly.newPlot('myDiv2', data, layout);
   </script>
 
-  <tr>
-    Zipcode Number:
-    <td><%= data %></td>
-  </tr>
+  <table>
+    <tr>
+      <th>zip </th>
+      <td></td>
+      <th>caseRate </th>
+      <th>vacinationRate </th>
+      <th>allHouseholdIncome </th>
+      <th>percentLatino </th>
+      <th>percentAsianNonHispanic </th>
+      <th>percentWhiteNonHispanic </th>
+      <th>percentOtherEthnicity </th>
+      <th>percentEthnicityUnkown </th>
+    </tr>
+    <tr>
+      <td><%= totalMicroData.zip %></td>
+      <td><%= totalMicroData.caseRate %></td>
+      <td><%= totalMicroData.vacinationRate %></td>
+      <td><%= totalMicroData.allHouseholdIncome %></td>
+      <td><%= totalMicroData.percentLatino %></td>
+      <td><%= totalMicroData.percentAsianNonHispanic %></td>
+      <td><%= totalMicroData.percentWhiteNonHispanic %></td>
+      <td><%= totalMicroData.percentOtherEthnicity %></td>
+      <td><%= totalMicroData.percentEthnicityUnkown %></td>
+    </tr>
+</table>
 
   <section id="summary">
-      <h1>Summary:</h1>
+      <h2>Summary:</h2>
       <ul>
-          <p> The pie charts above display that zip code <%= totalMicroData.zip %>'s average vacination rate is <%= totalMicroData.vacinationRate %> .</p>
-          <li> Zipcode <%= totalMicroData.zip %> has a case rate of <%= totalMicroData.caseRate %> . </li>
+        <p>The pie charts above display that zip code <%= totalMicroData.zip %>'s average vacination rate is <%= totalMicroData.vacinationRate %> .</p>
+        <p>Zipcode <%= totalMicroData.zip %> has a case rate of <%= totalMicroData.caseRate %>%. </li>
       </ul>
     </section>
 
