@@ -59,6 +59,7 @@ for(let i =0;i<zipCodes.length;i++){
   });
   fs.writeFileSync('../../build/'+zipCodes[i]+'.html',microHTML,'utf8')
 }
+
 fs.writeFileSync('../../build/index.html', indexHTML, 'utf8');
 fs.writeFileSync('../../build/about.html', aboutHTML, 'utf8');
 //fs.writeFileSync('../../src/images', 'IMG_7102.jpg');
