@@ -275,35 +275,11 @@
       </ul>
     </div>
   </nav>
-  <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
 
-        <table>
-          <tr>
-            <th>zip </th>
-            <td></td>
-            <th>caseRate </th>
-            <th>vacinationRate </th>
-            <th>allHouseholdIncome </th>
-            <th>percentLatino </th>
-            <th>percentAsianNonHispanic </th>
-            <th>percentWhiteNonHispanic </th>
-            <th>percentOtherEthnicity </th>
-            <th>percentEthnicityUnkown </th>
-            <th>blackNonHispanic </th>
-          </tr>
-          <tr>
-            <td>10017</td>
-            <td>7455.2</td>
-            <td>99</td>
-            <td>131045</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td></td>
-          </tr>
-      </table>
+  <tr>
+    Zipcode Number:
+    <td>10017</td>
+  </tr>
 
       <div id='myDiv2'><!-- Plotly chart will be drawn inside this DIV --></div>
   <script>
@@ -328,24 +304,48 @@
     Plotly.newPlot('myDiv2', data, layout);
   </script>
 
-  <tr>
-    Zipcode Number:
-    <td>10017</td>
-  </tr>
+  <table>
+    <tr>
+      <th>zip </th>
+      <td></td>
+      <th>caseRate </th>
+      <th>vacinationRate </th>
+      <th>allHouseholdIncome </th>
+      <th>percentLatino </th>
+      <th>percentAsianNonHispanic </th>
+      <th>percentWhiteNonHispanic </th>
+      <th>percentOtherEthnicity </th>
+      <th>percentEthnicityUnkown </th>
+    </tr>
+    <tr>
+      <td>10017</td>
+      <td>7455.2</td>
+      <td>99</td>
+      <td>131045</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+</table>
 
   <section id="summary">
       <h2>Summary:</h2>
       <ul>
         <p>The pie charts above display that zip code 10017's average vacination rate is 99 .</p>
-        <p>Zipcode 10017 has a case rate of 7455.2%. </li>
-      </ul>
+        <p>Zipcode 10017 has a case rate of 7455.2%. </p>
+        <p>The case rate 'percentage,' is more of a rate of change of cases. The data was last taken in November, but Covid is ever changing. Also, some
+          zip codes had less data, so we had to manually input - resulting in some holes in the data regarding percent race, etc. </p>
+          <p> Consequently, it is hard to draw many conclusions, though visualizing the data is sometimes helpful, especially when swamped with big issues like a pandemic</p>
+              </ul>
     </section>
 
     
   <footer class="bg-light text-center text-lg-start">
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        Made by Taran and Amelia || Data Received from:
+        Made by Taran and Amelia || Data Received from: <a href="https://www1.nyc.gov/site/doh/covid/covid-19-data.page"> Covid Data by Zip Code</a>
     </div>
     <!-- Copyright -->
   </footer>

@@ -2,7 +2,7 @@ const fs = require('fs');
 const ejs = require('ejs');
 
 let displayData = fs.readFileSync('../../data/totalData.json', 'utf8');
-//let microData = fs.readFileSync('../../data/totalMicroData.json', 'utf8');
+let microData = fs.readFileSync('../../data/totalMicroData.json', 'utf8');
 
 let indexTemplate = fs.readFileSync('index.ejs', 'utf8');
 let aboutTemplate = fs.readFileSync('about.ejs', 'utf8');
@@ -21,12 +21,13 @@ arrayZipCodes.forEach(function(i,index){
   newDisplayData.push(fs.readFileSync('../../data/' + i + '.json', 'utf8'))
 });
 */
-
+for(let i =0;i<zipCodes.length;i++){
 let indexHTML = ejs.render(indexTemplate, {
   filename: __dirname + 'index.ejs',
-  data: JSON.parse(displayData)
+  data: JSON.parse(displayData),
+  totalMicroData: data[i+1]
 });
-
+}
 let aboutHTML = ejs.render(aboutTemplate, {
   filename: __dirname + 'about.ejs',
 });
