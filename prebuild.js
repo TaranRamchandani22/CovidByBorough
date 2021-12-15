@@ -1,8 +1,8 @@
 
-var fs = require("fs-extra");
+var fs = require("fs");
 
 const dir = 'build';
 if (fs.existsSync(dir)) {
-fs.rmdirSync(dir, { recursive: true });
+   fs.rmdirSync(dir, { recursive: true });
 
 }

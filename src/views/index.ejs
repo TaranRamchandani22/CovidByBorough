@@ -121,28 +121,10 @@ var layout = {
       Plotly.newPlot("myDiv2", data, layout, {showLink: false});
 });
 </script>
-<h2>Data Table:</h2>
 
-<section id="charcter-table">
-  <table>
- <% for(let i=0; i<data.length; i++){ %>
-    <tr>
-        <td><%= data[i].zip %></td>
-        <td><%= data[i].caseRate %></td>
-        <td><%= data[i].vacinationRate %></td>
-        <td><%= data[i].allHouseholdIncome %></td>
-        <td><%= data[i].percentLatino %></td>
-        <td><%= data[i].percentAsianNonHispanic %></td>
-        <td><%= data[i].percentWhiteNonHispanic %></td>
-        <td><%= data[i].percentOtherEthnicity %></td>
-        <td><%= data[i].percentEthnicityUnkown %></td>
-    </tr>
-    <%}%>
-  </table>
-</section>
 <h1>An Exploration of Covid and Vaccination Rates based of Zip Code Demographics</h1>
 <h5>Our project name changed, among other things, since we started brainstorming for this project.
-Instead of analyzing data by borough, we decided to focus just on Manhattan and divide zones based on zip code. We aimed to depict the effects, if any were found, of socioeconomic status and race on the progression of Covid 19
+Instead of analyzing data by borough, we decided to focus just on Manhattan and divide zones based on zip code. We aimed to depict the effects, if any were found, of socioeconomic status and race on the progression of Covid 19.
 </h5>
 <h2>Data Summary:</h2>
   <ol>
